@@ -1,0 +1,26 @@
+public class EjemploStingTest {
+    public static void main(String[] args) {
+
+        String a = "a";
+        String b = "b";
+        String c = a;
+
+        StringBuilder sb = new StringBuilder(a);
+
+
+        Long inicio = System.currentTimeMillis();
+
+        for(int i = 0; i < 1000 ; i++){
+            c = c.concat(a).concat(b).concat("\n"); //-- 2 milisegundos y 24 milisegundos para 1000
+            c += a + b + "\n";
+            //sb.append(a);
+            //sb.append(b);
+            //sb.append("\n"); // 19 milisegundos -- con 1000 se demora 16 milisegundos
+        }
+
+        Long fin = System.currentTimeMillis();
+        System.out.println(fin - inicio);
+        System.out.println("c = " + c);
+        System.out.println("sb = " + sb.toString());
+    }
+}
