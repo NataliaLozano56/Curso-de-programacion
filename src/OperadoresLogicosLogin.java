@@ -1,18 +1,24 @@
 import java.util.Scanner;
 
 public class OperadoresLogicosLogin {
+
     public static void main(String[] args) {
 
-        String username = "Natalia";
-        String password = "Maria123";
+        String[] usernames = new String[3];
+        String[] passwords = new String[3];
 
-        String username2 = "Tohru";
-        String password2 = "Kyou";
+        usernames[0] = "Natalia";
+        passwords[0] = "Maria123";
 
-        Scanner sc = new Scanner((System.in));
+        usernames[1] = "Tohru";
+        passwords[1] = "Kyou";
+
+        usernames[2] = "Risa";
+        passwords[2] = "Otani";
+
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("Ingrese el Username");
-
         String u = sc.nextLine();
 
         System.out.println("Ingrese el password");
@@ -20,17 +26,24 @@ public class OperadoresLogicosLogin {
 
         boolean esAutentico = false;
 
-        if (username.equals(u) && password.equals(p) || username2.equals(u) && password2.equals(p) ) {
-            esAutentico = true; //para comparar una igualdad entre dos valores del tipo String
-        } else {
-            System.out.println("Username o contraseña no valida");
+        for (int i = 0; i < usernames.length; i++) {
+
+            if (usernames[i].equals(u) && passwords[i].equals(p)) {
+
+                esAutentico = true;
+                break;
+            }
         }
 
         if (esAutentico) {
-            System.out.println("Bienvenido usuario ".concat(u).concat("!"));
+
+            System.out.println("Bienvenido usuario " + u + "!");
 
         } else {
-            System.out.println("lo siento, requiere autentificación");
+
+            System.out.println("Username o contraseña no válida");
+            System.out.println("Lo siento, requiere autentificación");
         }
     }
 }
+
