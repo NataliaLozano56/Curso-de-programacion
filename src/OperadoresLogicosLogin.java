@@ -7,14 +7,14 @@ public class OperadoresLogicosLogin {
         String[] usernames = new String[3];
         String[] passwords = new String[3];
 
-        usernames[0] = "Natalia";
-        passwords[0] = "Maria123";
+        usernames[0] = " Natalia";
+        passwords[0] = " Maria123";
 
-        usernames[1] = "Tohru";
-        passwords[1] = "Kyou";
+        usernames[1] = " Tohru";
+        passwords[1] = " Kyou";
 
-        usernames[2] = "Risa";
-        passwords[2] = "Otani";
+        usernames[2] = " Risa";
+        passwords[2] = " Otani";
 
         Scanner sc = new Scanner(System.in);
 
@@ -26,24 +26,29 @@ public class OperadoresLogicosLogin {
 
         boolean esAutentico = false;
 
-        for (int i = 0; i < usernames.length; i++) {
+        for (int i = 0; i < usernames.length; i++) { // aqui hicimos el cambio en la clase operador ternario
+            esAutentico = (usernames[i].equals(u) && passwords[i].equals(p))? true : esAutentico;
 
-            if (usernames[i].equals(u) && passwords[i].equals(p)) {
+            //if (usernames[i].equals(u) && passwords[i].equals(p)) {
 
-                esAutentico = true;
-                break;
-            }
+                //esAutentico = true;
+                //break;
+            //}
         }
 
-        if (esAutentico) {
+        String mensaje = esAutentico ? "Bienvenido usuario".concat(u).concat("!") :
+                "Username o contraseña incorrecta! \n Lo sentimos, requiere autenticacion";
+        System.out.println(mensaje);
 
-            System.out.println("Bienvenido usuario " + u + "!");
+        //if (esAutentico) {
 
-        } else {
+           // System.out.println("Bienvenido usuario " + u + "!");
 
-            System.out.println("Username o contraseña no válida");
-            System.out.println("Lo siento, requiere autentificación");
-        }
+        //} else {
+
+           // System.out.println("Username o contraseña no válida");
+          //  System.out.println("Lo siento, requiere autentificación");
+      //  }
     }
 }
 
