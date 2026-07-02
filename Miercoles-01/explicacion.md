@@ -146,5 +146,6 @@ Evidencia que lo hice a mano
 Ahora, lo que terminaré haciendo por hoy, son los proyectos, creando los repositorios y tener en cada uno de los editores 
 de código 
 
-Biblioteca personal: https://github.com/NataliaLozano56/Biblioteca-personal--py.git
-AnimeList: (este lo voy a enviar luego, por que voy a crear un nuevo proyecto en este editor de codigo)
+Biblioteca personal: https://github.com/NataliaLozano56/Biblioteca-personal--py.git}
+
+AnimeList: https://github.com/NataliaLozano56/Animelist-61.git
